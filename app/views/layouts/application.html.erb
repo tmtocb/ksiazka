@@ -2,18 +2,15 @@
 <html>
   <head>
     <title><%= full_title(yield(:title)) %></title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= render 'layouts/layout_head' %>
     <%= render 'layouts/shim' %>
   </head>
 
   <body>
     <%= render 'layouts/navbar' %>
-    <div class="container">
+    <div class="container pb">
       <%= yield %>
+      <%= render 'layouts/footer' %>
     </div>
   </body>
 </html>
