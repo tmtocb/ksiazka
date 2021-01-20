@@ -1,0 +1,4 @@
+mateusz:
+  name: Mateusz Tomczak
+  email: jwp@example.com
+  password_digest: <%= User.digest('password') %>
