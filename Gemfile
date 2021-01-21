@@ -36,5 +36,6 @@ group :test do
   gem 'webdrivers'
   gem 'rails-controller-testing'
   gem 'minitest-reporters'
+  gem 'simplecov', require: false
 end
 
