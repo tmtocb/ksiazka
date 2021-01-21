@@ -18,13 +18,6 @@ class User < ApplicationRecord
     SecureRandom.urlsafe_base64
   end
 
-  # Remembers a user in the database for use in persistent sessions.
-  def remember
-    user.remember
-    cookies.permanent.encrypted[:user_id] = user.id
-    cookies.permanent[:remember_token] = user.remember_token
-  end
-
   # Returns true if the given token matches the digest.
   def authenticated?(remember_token)
     BCrypt::Password.new(remember_digest).is_password?(remember_token)
